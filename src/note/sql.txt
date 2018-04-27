@@ -1,0 +1,1 @@
+SELECT person.id, person.NAME, person.birthday, person.militaryTime, person.gend, person.partyTime, person.remark, party.partyname, rank.rankname,address.province, address.country, address.city, address.id_address FROM address, person, party, rank  WHERE person.id_rank = rank.id_rank  AND person.id_party = party.id_party  AND person.id_address = address.id_address  AND person.id
