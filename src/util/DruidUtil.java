@@ -83,6 +83,7 @@ public class DruidUtil {
 			return handle_1;// 将结果集传递给传入类的结果集处理器
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		} finally {
 			DruidUtil.closeAll(connection, pStatement, resultSet);
 

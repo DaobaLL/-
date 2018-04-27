@@ -3,6 +3,7 @@ package com.work.dao;
 import java.util.List;
 
 import com.work.nativies.Person;
+import com.work.nativies.PersonAllMessage;
 
 //各类方法的接口
 public interface IPersonDAO {
@@ -22,7 +23,7 @@ public interface IPersonDAO {
 	 * 根据id查询人员信息
 	 * @param id 
 	 */
-	Person getPersonByID(Long id);
+	PersonAllMessage getPersonByID(Long id);
 	/**
 	 * 存储对象到对象对应类的表中
 	 * @param object 需要存储的对象

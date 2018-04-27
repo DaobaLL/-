@@ -1,11 +1,11 @@
 package com.work.test;
 
-
 import org.junit.jupiter.api.Test;
 
 import com.work.dao.impl.PersonDAOImpl;
 import com.work.nativies.Party;
 import com.work.nativies.Person;
+import com.work.nativies.PersonAllMessage;
 
 class PersonDAOImplTest {
 	PersonDAOImpl pDAO = new PersonDAOImpl();
@@ -20,10 +20,10 @@ class PersonDAOImplTest {
 		party.setPartyName("修理所");
 		pDAO.save(party);
 	}
-	
+
 	@Test
-	void testGetPersonByID() {
-		Person person = pDAO.getPersonByID(1L);
-		System.out.println(person.toString());
+	void test1() {
+		PersonAllMessage personAllMessage = pDAO.getPersonByID(1L);
+		System.out.println(personAllMessage.toString());
 	}
 }
