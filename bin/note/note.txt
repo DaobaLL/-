@@ -1,0 +1,63 @@
+1.建立基本类：
+	person:
+		integer id:
+		String name:
+		Party party:
+	party:党团情况，包括党员、预备党员、团员、青年
+		integer id:
+		String partyName:
+	Address:人员地址
+		integer id:
+		String province:省名
+		String city:市
+		String country:县
+	Rank:军衔
+		integer id:
+		String rankName:军衔
+	
+	
+	
+2. 建立数据库连接池
+	建立数据库参数文件 db.properties
+	2）建立连接类：
+		jdbcUtil.class:实现三个操作
+			#启动连接：
+			#执行sql语句
+			#关闭连接
+	3）建立连接池
+
+
+
+3. 建立数据DAO层：
+	1） 所要用到的增删改查相关的方法
+	personHander.savePerson(Person person):
+	personHander.deletePerson(integer id):
+	personHander.updatePerson(Person person):
+	personHander.getPersonByID(integer id):
+	personHander.getPersonsByParty(List<Party> parties):
+	personHander.getPersonsByBirthdayBefore(Date birthday):
+	personHander.getPersonsByBirthdayAfter(Date birthday):
+	personHander.getPersonsByBirthdayIn(Date birthday1,Date birthday2):
+	personHander.getPersonsByAddress(List<Address> addresses):
+	personHander.getPersonsByNameLike(String name):
+	personHander.getPersonsByRemarkLike(String remark):
+	......
+	2）内部操作需要用到的方法
+	人员统计、实力统计、休假情况统计、休假数据汇总
+	3） 管理员操作使用的方法
+		···系统登录密码验证
+		···用户密码修改
+		···用户添加
+		···用户权限控制
+	4）数据处理相关方法
+		···数据转成excel到处到硬盘
+		···数据转成word保存到硬盘
+		···从excel导入数据到数据库
+
+4. 数据库建立
+
+5. 界面制作
+	1）初始界面：用户登录验证
+	2）主界面：各操作的接口
+	3）各分页面制作：人员管理、系统信息管理、查询
+		
